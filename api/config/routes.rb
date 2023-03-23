@@ -4,5 +4,9 @@ Rails.application.routes.draw do
 
   # user
   post '/users', to: 'users#register'
+  post '/users/login', to: 'users#login'
+  get '/users/login/check', to: 'users#check_login_status'
+  delete '/users/logout', to: 'users#check_login_status'
 
+  post '/todos', to: 'todos#create'
 end
